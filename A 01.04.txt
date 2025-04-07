@@ -1,0 +1,22 @@
+A internet funciona como uma grande rede global que conecta dispositivos e permite a troca de informações. Seu funcionamento pode ser resumido em alguns pontos principais:
+
+Infraestrutura Física – A internet é composta por servidores, cabos submarinos, satélites e redes sem fio que transportam dados pelo mundo.
+
+Protocolo de Comunicação (TCP/IP) – Os dados são divididos em pequenos pacotes e enviados de um ponto a outro usando protocolos como o TCP/IP, que garante que a informação chegue corretamente.
+
+Endereçamento (IP e DNS) – Cada dispositivo tem um endereço IP único. O DNS (Sistema de Nomes de Domínio) converte endereços amigáveis (como google.com) em endereços IP.
+
+Servidores e Hospedagem – Sites e serviços online são armazenados em servidores, que respondem às solicitações dos usuários quando acessam páginas da web.
+
+Provedores de Internet (ISP) – São as empresas que fornecem acesso à internet para usuários domésticos e empresas.
+
+Segurança e Criptografia – Medidas como SSL/TLS protegem as informações durante a transmissão, garantindo privacidade e segurança.
+
+Em resumo, a internet é uma rede global que permite a comunicação e o compartilhamento de dados por meio de protocolos e infraestrutura distribuída.
+
+
+
+
+
+
+

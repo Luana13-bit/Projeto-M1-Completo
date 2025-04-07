@@ -1,0 +1,29 @@
+body{
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+li{
+    /* cor de fundo */
+    background-color: aqua;
+    /* distancia do elemento debaixo */
+    margin-bottom: 10px;
+    /* bordas mais redondas */
+    border-radius: 5px;
+    /* retira o ponto do inicio do item */
+    list-style: none;
+    /* distancia do conteudo para as bordas */
+    padding: 5px;
+    /* tamanho do elemento */
+    width: 20%;
+    /* alinha o texto dentro do elemento */
+    text-align: center;
+}
+
+li:hover{
+    background-color: pink;
+    /* muda o icone do mouse */
+    cursor: pointer;
+}

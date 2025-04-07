@@ -1,0 +1,30 @@
+.container {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 500px;
+}
+.container-blue {
+    background-color: blue;
+    display:flex;
+    flex-direction: column;
+    height: 500px;
+
+}
+
+.img-mario{
+    width: 400px;
+    height: 150px;
+}
+
+.div-purple{
+    width: 400px;
+    background-color: blueviolet;
+
+}
+
+.div-brown{
+    width: 400px;
+    background-color: brown;
+}

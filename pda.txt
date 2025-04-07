@@ -1,0 +1,133 @@
+ HORIZONTAL:FINAL
+VERTICAL:INICIAL 
+
+
+1. criar pasta na área de trabalho 
+2. abrir VScode 
+3. ir em "file/arquivo" -> "new window/ nova janela"
+4. clicar em "Open folder/abrir pasta" e selecionar a pasta criada.
+5. criar um arquivo chamado index.html
+6. inserir dentro do arquivo ! + ENTER
+
+
+COMO SALVAR: CTRL + S
+
+
+TUDO QUE ESTIVER FR DO BORE NAO ACEITA
+
+DENTRO DA IMAGEM TEM UMA TECNICA SE ESTA BUSCANDO RL O SRC 
+COPIAR ENDEREÇO DA IMAGEM E COLAR LINK
+
+
+DOCKTAPE: TIPO DO DOCUMENTO
+
+
+
+
+
+
+align-items: Alinhamento vertical dentro de um container flexível 
+
+background: Definir Fundo 
+
+background-color: Definir COR para o fundo 
+
+background-image: Definir IMAGEM para o fundo
+
+background-repeat: Definir que a imagem não se repita no fundo
+
+background-size: Definir tamanho da IMAGEM ou COR do fundo
+
+border: Definir especificações da borda | tamanho, estilo e cor
+
+border-bottom: Definir especificações da parte de baixo da borda
+
+border-top: Definir especificações da parte de cima da borda
+
+border-left: Definir especificações do lado esquerdo da borda
+
+border-right: Definir especificações do lado direito da borda
+
+border-color: Definir COR da borda
+
+color: Definir cor de um elemento(geralmente texto, ícones)
+
+display: Definir a flexibilidade dos elementos
+
+flex-direction: Definir a direção dos elementos (coluna ou linha)
+
+font-size: Tamanho da letra do texto px
+
+font-family: Definir tipo de letra (Roboto, Sans-Serif)
+
+font-weight: Definir intensidade do negrito
+
+height: Definir altura do elemento
+
+justify-content: Definir posicionamento horizontal do elemento dentro de um container
+
+justify-items: Definir posicionamento horizontal de todos os elementos que estão dentro de containers filhos através do container pai
+ 
+justify-self: Se auto alinhar horizontalmente dentro de um container
+
+list-style: Definir estilo da lista
+
+
+
+ESQUELETO-HTML- ELEMENTOS 
+caracteriscas-css-
+
+UL=>LISTAS NAO ORDENADAS
+EXPLORER=EXPLORADOR DE ARQUIVOS
+H1=TITULO
+PARA CONECTAR O CSS PRECISA SER DENTRO DA TAG"HEAD"
+ESCRITA DO HTML=É FEITA ATRAVÉS DE TAGS
+ESCRITA DO CSS=É FEITA ATRAVÉS DE SELETORES
+SELETORES DE CLASS OU ID 
+SELETORES DE TAG,SELETORES,DE CLASS E ID
+CLASS=>USAR O PONTO (.)
+display: none é para tirar do padrão de exibição
+
+
+https://github.com/Bia-source
+
+https://www.w3schools.com/tags/
+
+https://portifolio-pda.vercel.app/s
+
+
+
+
+
+
+
+
+
+.first{
+    margin-left: 50px;
+    height: 650px;
+    width: 650px;
+    background-color: orangered;
+    
+}
+.items{
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 300px;
+}
+/* quando o flex-direction é row
+   justify-content alinha na HORIZONTAL
+   align-items alinha na VERTICAL
+   quando o flex-direction é column
+   justify-content alinha na VERTICAL
+   align-items alinha na HORIZONTAL
+*/
+ul{
+    list-style: none;
+}
+body{
+    background-color: black;
+}

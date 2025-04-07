@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 90%;
+    max-width: 800px;
+    justify-content: center;
+  }
+  
+  .item {
+    background-color: rgb(81, 255, 0);
+    color: #000;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    flex: 1 1 calc(25% - 10px); /* Desktop: 4 itens por linha */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Media Query para dispositivos menores */
+  @media (max-width: 768px) {
+    .item {
+      flex: 1 1 100%; /* Celular: 1 item por linha */
+    }
+  }

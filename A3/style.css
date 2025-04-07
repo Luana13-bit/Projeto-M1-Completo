@@ -1,0 +1,24 @@
+body{
+    background-color: black;
+    color:rgb(230, 225, 225);
+}
+h1{
+    border-bottom: 2px solid;
+    text-align: center;
+    font-style: italic;
+}
+ul li{
+    text-align: center;
+    color: aliceblue;
+}
+ul{
+    list-style: none;
+}
+p{color: aliceblue;
+    font-style: italic;
+}
+#titulo{
+    color: brown;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15pxa;
+}
