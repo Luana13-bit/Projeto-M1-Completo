@@ -1,0 +1,7 @@
+constructor => função para a criação das propriedades da Classe.
+
+this => referência da propriedade à própria classe
+
+map => cria um outro array com elementos novos
+
+
