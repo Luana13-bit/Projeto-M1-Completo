@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Peças Cadastradas</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <nav class="menu">
+    <a href="index.html">Home</a>
+    <a href="pecas.html">Ver peças</a>
+  </nav>
+
+  <!-- Formulário escondido por padrão (só aparece em modo de edição) -->
+  <section class="container-form" id="form-section" style="display: none;">
+    <h2>Edição de Peça</h2>
+    <form id="form-edicao">
+      <input id="input-nome" type="text" placeholder="Nome da peça" required>
+      <input id="input-descricao" type="text" placeholder="Descrição da peça" required>
+      <input id="input-valor" type="number" placeholder="Valor da peça" required>
+      <button id="botao-salvar" type="submit">Salvar Alterações</button>
+    </form>
+  </section>
+
+  <section id="container-peças" class="cards-container">
+    <h2>Lista de peças cadastradas</h2>
+  </section>
+
+  <script>
+    let listaProdutos = JSON.parse(localStorage.getItem("produtos")) || [];
+    let editIndex = -1;
+
+    const formSection = document.getElementById('form-section');
+    const form = document.getElementById('form-edicao');
+    const nome = document.getElementById('input-nome');
+    const descricao = document.getElementById('input-descricao');
+    const valor = document.getElementById('input-valor');
+    const botaoSalvar = document.getElementById('botao-salvar');
+    const containerProdutos = document.getElementById('container-peças');
+
+    function salvarNoLocalStorage() {
+      localStorage.setItem("produtos", JSON.stringify(listaProdutos));
+    }
+
+    function renderizarProdutos() {
+      containerProdutos.innerHTML = '<h2>Lista de peças cadastradas</h2>';
+
+      listaProdutos.forEach((produto, index) => {
+        const card = document.createElement('div');
+        card.className = 'cards-peças';
+        card.innerHTML = `
+          <p><strong>Nome:</strong> ${produto.nome}</p>
+          <p><strong>Descrição:</strong> ${produto.descricao}</p>
+          <p><strong>Valor:</strong> R$ ${parseFloat(produto.valor).toFixed(2).replace('.', ',')}</p>
+          <span>
+            <button onclick="editarProduto(${index})">Editar</button>
+            <button onclick="excluirProduto(${index})">Excluir</button>
+          </span>
+        `;
+        containerProdutos.appendChild(card);
+      });
+    }
+
+    function editarProduto(index) {
+      const produto = listaProdutos[index];
+      nome.value = produto.nome;
+      descricao.value = produto.descricao;
+      valor.value = produto.valor;
+
+      editIndex = index;
+      botaoSalvar.textContent = "Salvar Alterações";
+      formSection.style.display = 'block'; // Mostra o formulário de edição
+    }
+
+    function excluirProduto(index) {
+      if (confirm("Tem certeza que deseja excluir?")) {
+        listaProdutos.splice(index, 1);
+        salvarNoLocalStorage();
+        renderizarProdutos();
+        formSection.style.display = 'none'; // Esconde o formulário caso esteja aberto
+      }
+    }
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      if (editIndex >= 0) {
+        listaProdutos[editIndex] = {
+          nome: nome.value,
+          descricao: descricao.value,
+          valor: valor.value,
+          imagem: ''
+        };
+
+        salvarNoLocalStorage();
+        renderizarProdutos();
+        form.reset();
+        formSection.style.display = 'none';
+        editIndex = -1;
+      }
+    });
+
+    renderizarProdutos();
+  </script>
+</body>
+</html>
